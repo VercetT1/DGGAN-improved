@@ -1,0 +1,2 @@
+model_checkpoint_path: "/content/drive/MyDrive/DGGAN/results/link_prediction/citemodel.ckpt-3"
+all_model_checkpoint_paths: "/content/drive/MyDrive/DGGAN/results/link_prediction/citemodel.ckpt-3"

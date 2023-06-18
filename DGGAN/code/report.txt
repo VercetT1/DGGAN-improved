@@ -1,0 +1,46 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 8 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: /content/drive/MyDrive/DGGAN/code/discriminator.py
+--------------------------------------------------------------------------------
+/content/drive/MyDrive/DGGAN/code/discriminator.py:12:41: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+/content/drive/MyDrive/DGGAN/code/discriminator.py:17:41: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+/content/drive/MyDrive/DGGAN/code/discriminator.py:30:53: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+/content/drive/MyDrive/DGGAN/code/discriminator.py:32:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+/content/drive/MyDrive/DGGAN/code/discriminator.py:33:43: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+/content/drive/MyDrive/DGGAN/code/discriminator.py:41:33: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+/content/drive/MyDrive/DGGAN/code/discriminator.py:42:50: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+/content/drive/MyDrive/DGGAN/code/discriminator.py:43:50: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file '/content/drive/MyDrive/DGGAN/code/discriminator.py'
+ outputting to '/content/drive/MyDrive/DGGAN/code/new_discriminator.py'
+--------------------------------------------------------------------------------
+
+12:41: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+12:41: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+14:71: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+14:71: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+17:41: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+17:41: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+19:71: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+22:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+24:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+26:35: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+30:53: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+32:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+33:43: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+41:33: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+42:50: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+43:50: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+51:20: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+--------------------------------------------------------------------------------
+
